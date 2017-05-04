@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>sign</title>
+    <title>signup</title>
 </head>
 <body>
     <section class="hero is-warning is-fullheight">
+    <div class="hero-head">
+        <div class="container has-text-centered">
+            <p class="title">新用户注册</p>
+        </div>
+    </div>
     <div class="hero-body">
         <div class="container has-text-centered">
             <div class="columns">
-                <div class="column">
-                    <figure class="image is-128x128" style="margin: auto;">
-                        <img src="http://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                </div>
                 <div class="column">
                    <div class="field">
                         <p class="control has-icons-left">
@@ -35,27 +35,51 @@
                         </p>
                     </div>
                     <div class="field">
+                        <p class="control has-icons-left">
+                            <input type="text" class="input" type="password" placeholder="Enter Again">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
                         <p class="control" style="text-align: -webkit-center;">
                             <button class="button is-success">
-                            登陆
+                            注册
                             </button>
                         </p>
                     </div>
-                </div>
-                <div class="column">
-                    新注册
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-foot">
-        <div class="container">
-            <div class="content has-text-centered">
-            <p>
-                <strong>JFly Inc</strong> 
-            </p>
-        </div>
-        </div>
+        <footer class="footer is-warning">
+            <div class="container">
+                <div class="content has-text-centered">
+                <p>
+                    <strong>关联注册</strong> 
+                </p>
+                <hr>
+                <div class="block">
+                    <a href="" class="button is-light">
+                        <span class="icon is-medium">
+                            <i class="fa fa-qq"></i>
+                        </span>
+                    </a>
+                    <a href="" class="button is-light" style="margin:0 3rem 0 3rem">
+                        <span class="icon is-medium">
+                            <i class="fa fa-weibo"></i>
+                        </span>
+                    </a>
+                    <a href="" class="button is-light">
+                        <span class="icon is-medium">
+                            <i class="fa fa-weixin"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
 </section>
 </body>
