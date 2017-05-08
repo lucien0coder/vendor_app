@@ -5,98 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>user</title>
+    <title>shop-details</title>
+        <style>
+        .user_level{
+            position: absolute;
+            left: 3rem;
+            top: 6rem;
+            z-index: 1;
+            transform: rotate(-23deg);
+            font-size: larger;
+            color:blueviolet
+        }
+
+    </style>
 </head>
+
 <body>
-    <section class="hero is-warning  is-fullheight">
+    <section class="hero is-fullheight">
         <div class="hero-head">
-            <h2 class="subtitle has-text-centered" style="margin:0.5rem">
-                <span class="icon is-pulled-left">
-                    <i class="fa fa-arrow-left"></i>  
-                </span>
-                用户详情
-            </h2>
+            <span class="user_level">一级美食家</span>
             <div class="container">
                 <div class="card" style="margin-bottom: 0.2rem;">
                 <div class="card-content">
                     <div class="media">
-                    <div class="media-centered">
+                    <div class="media-left">
                         <figure class="image is-96x96">
                         <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
                         </figure>
                     </div>
                     <div class="media-content">
                         <p class="title is-5">
-                            <span class="icon is-pulled-right"><i class="fa fa-heart"></i></span>
+                            <strong>Lucien Chu</strong>
                         </p>
+                        <p class="subtitle is-6">panyu</p>
+                        <a class="button is-success">修改个人信息</a>
+                        <span class="icon is-pulled-right is-medium">
+                            <i class="fa fa-bookmark"></i>
+                        </span>
                     </div>
                     </div>
                     <hr>
-                    <div class="content has-text-left">
-                        <p class="title is-5">
-                            <span class="icon"><i class="fa fa-user"></i></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>Lucien Chu</strong>
-                        </p>
-                        <p class="title is-5">
-                            <span class="icon"><i class="fa fa-dot-circle-o"></i></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>Canton</strong>
-                        </p>
-                        <p class="title is-5">
-                            <span class="icon"><i class="fa fa-pencil-square"></i></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>吃也是一种信仰</strong>
-                        </p>
+                    <div class="content">
+                        <p>当前账号积分：1500分</p>
+                    </div>
+                    <hr>
+                    <div class="content"  style="background-color: aliceblue;">
+                        <a class="is-large"><h1 class="title is-3 is-spaced ">$ 500 赏金</h1></a>
                     </div>
                 </div>
-                <footer class="card-footer">
-                    <a class="card-footer-item">
-                        食评 200
-                    </a>
-                    <a class="card-footer-item">
-                        解答 212
-                    </a>
-                </footer>
                 </div>
             </div>  
-            <!-- comment -->
-            <div class="box is-marginless">
-                <article class="media">
-                    <div class="media-left">
-                    <figure class="image is-32x32">
-                        <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
-                    </figure>
-                    </div>
-                    <div class="media-content">
-                    <div class="content">
-                        <p>
-                        <strong>John Smith</strong> <small>31m</small>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                        </p>
-                    </div>
-                    </div>
-                </article>
-            </div>
-            <div class="box is-marginless">
-                <article class="media">
-                    <div class="media-left">
-                    <figure class="image is-32x32">
-                        <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
-                    </figure>
-                    </div>
-                    <div class="media-content">
-                    <div class="content">
-                        <p>
-                        <strong>John Smith</strong> <small>31m</small>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                        </p>
-                    </div>
-                    </div>
-                </article>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <aside class="menu">
+                <p class="menu-label">
+                    游戏规则
+                </p>
+                <ul class="menu-list">
+                </ul>
+                <p class="menu-label">
+                    赏金说明
+                </p>
+                <ul class="menu-list">
+                    <li><a>Team Settings</a></li>
+                    <li>
+                    <a class="is-active">Manage Your Team</a>
+                    <ul>
+                        <li><a>Members</a></li>
+                        <li><a>Plugins</a></li>
+                        <li><a>Add a member</a></li>
+                    </ul>
+                    </li>
+                    <li><a>Invitations</a></li>
+                    <li><a>Cloud Storage Environment Settings</a></li>
+                    <li><a>Authentication</a></li>
+                </ul>
+                <p class="menu-label">
+                    意见建议
+                </p>
+                <ul class="menu-list">
+                </ul>
+                <p class="menu-label">
+                    版本信息
+                </p>
+                <ul class="menu-list">
+                </ul>
+                </aside>
             </div>
         </div>
-
     </section>
-
+    <footer class="footer" style="padding:0%;position: fixed;bottom: 0;width: 100%;">
+        <div class="tabs is-toggle is-fullwidth ">
+            <ul>
+                <li>
+                <a>
+                    <span class="icon"><i class="fa fa-motorcycle"></i></span>
+                </a>
+                </li>
+                <li>
+                <a>
+                    <span class="icon">『尋』</span>
+                </a>
+                </li>
+                <li>
+                <a>
+                    <span class="icon"><i class="fa  fa-pencil"></i></span>
+                </a>
+                </li>
+                <li>
+                <a>
+                    <span class="icon"><i class="fa fa-road"></i></span>
+                </a>
+                </li>
+                <li class="is-active">
+                <a>
+                    <span class="icon"><i class="fa fa-user-circle"></i></span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
