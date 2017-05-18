@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 import FooComment from '@/components/views/FooComment'
 import FoodCommentDetails from '@/components/views/FoodCommentDetails'
 import Looking from '@/components/views/Looking'
@@ -15,18 +14,19 @@ import Signup from '@/components/views/Signup'
 import Selected from '@/components/views/Selected'
 import ShopDetails from '@/components/views/ShopDetails'
 import UserDetails from '@/components/views/UserDetails'
+// import Hello from '@/components/Hello'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'Hello',
+    //   component: Hello
+    // },
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/fooComment',
       name: 'fooComment',
       component: FooComment,
       children: [{

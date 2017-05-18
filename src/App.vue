@@ -7,29 +7,29 @@
       <div class="tabs is-toggle is-fullwidth ">
           <ul>
               <li>
-              <a>
+              <router-link to="/">
                   <span class="icon"><i class="fa fa-motorcycle"></i></span>
-              </a>
+              </router-link>
               </li>
               <li>
-              <a>
+              <router-link to="/looking">
                   <span class="icon">『尋』</span>
-              </a>
+              </router-link>
               </li>
               <li>
-              <a>
-                  <span class="icon"><i class="fa  fa-pencil"></i></span>
-              </a>
+              <router-link to="/newpost">
+                  <span class="icon"><i class="fa fa-pencil"></i></span>
+              </router-link>
               </li>
               <li>
-              <a>
+              <router-link to="/track">
                   <span class="icon"><i class="fa fa-road"></i></span>
-              </a>
+              </router-link>
               </li>
               <li class="is-active">
-              <a>
+              <router-link to="/mine">
                   <span class="icon"><i class="fa fa-user-circle"></i></span>
-              </a>
+              </router-link>
               </li>
           </ul>
       </div>
