@@ -1,23 +1,5 @@
 <template>
     <div>
-        <div class="hero-head">
-            <div class="field has-addons">
-                <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="search things">
-                </p>
-                <p class="control">
-                    <span class="select">
-                    <select>
-                        <option>食评贴</option>
-                        <option>寻食贴</option>
-                        <option>评论</option>
-                        <option>赞的</option>
-                    </select>
-                    </span>
-                </p>
-            </div>
-        </div>
-
         <div class="hero-body">
             <div class="container">
             <div class="field has-addons">

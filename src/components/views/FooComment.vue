@@ -1,41 +1,7 @@
 <template>
-<div>
-    <div class="hero-head">
-        <div class="field has-addons">
-            <p class="control is-expanded">
-                <input class="input" type="text" placeholder="search things">
-            </p>
-            <p class="control">
-                <span class="select">
-                <select>
-                    <option>食评</option>
-                    <option>店铺</option>
-                    <option>美食家</option>
-                </select>
-                </span>
-            </p>
-        </div>
-    </div>
-
     <div class="hero-body">
         <div class="container">
-            <div class="card" style="margin-bottom: 0.2rem;">
-                <div class="is-overlay has-text-centered" style="z-index: 1;margin-top: 20%;">
-                    <a class="button is-warning is-outlined is-medium">
-                        <span class="icon">
-                            <i class="fa fa-map-marker"></i>
-                        </span>
-                        &nbsp;&nbsp;&nbsp;番禺
-                    </a>
-                </div>
-                <div class="is-overlay has-text-right" style="z-index:1;margin-top:40%;"><span class="icon is-medium"><i class="fa fa-bookmark"></i></span></div>
-                <div class="card-image">
-                    <figure class="image is-2by1">
-                    <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
-                    </figure>
-                </div>
-            </div>
-
+            <Location :show="true"></Location>
             <div class="card" style="margin-bottom: 0.2rem;">
             <div class="card-content">
                 <div class="media">
@@ -147,10 +113,14 @@
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
-    export default{
-    }
+import Location from '../Location'
+
+export default {
+  components: {
+    Location
+  }
+}
 </script>
