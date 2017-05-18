@@ -19,7 +19,6 @@
 
     <div class="hero-body">
         <div class="container">
-
             <div class="card" style="margin-bottom: 0.2rem;">
                 <div class="is-overlay has-text-centered" style="z-index: 1;margin-top: 20%;">
                     <a class="button is-warning is-outlined is-medium">
