@@ -23,11 +23,12 @@ export default new Router({
     {
       path: '/',
       name: 'fooComment',
-      component: FooComment,
-      children: [{
-        path: '/: id',
-        component: FoodCommentDetails
-      }]
+      component: FooComment
+    },
+    {
+      path: '/fooComment/:id',
+      name: 'fcDetails',
+      component: FoodCommentDetails
     },
     {
       path: '/looking',
@@ -64,18 +65,14 @@ export default new Router({
       component: Mine
     },
     {
-      path: '/sign',
-      name: 'sign',
-      children: [
-        {
-          path: '/in',
-          component: Signin
-        },
-        {
-          path: 'up',
-          component: Signup
-        }
-      ]
+      path: '/signin',
+      name: 'signin',
+      component: Signin
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup
     },
     {
       path: '/selected',
@@ -83,18 +80,14 @@ export default new Router({
       component: Selected
     },
     {
-      path: '/details',
-      name: 'details',
-      children: [
-        {
-          path: 'shop/:id',
-          component: ShopDetails
-        },
-        {
-          path: 'user/:id',
-          component: UserDetails
-        }
-      ]
+      path: '/details/shop/:id',
+      name: 'shopDetails',
+      component: ShopDetails
+    },
+    {
+      path: '/details/user/:id',
+      name: 'userDetails',
+      component: UserDetails
     }
   ]
 })
