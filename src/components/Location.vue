@@ -8,7 +8,7 @@
                 &nbsp;&nbsp;&nbsp;番禺
             </router-link>
         </div>
-        <div class="is-overlay has-text-right" style="z-index:1;margin-top:40%;"><span class="icon is-medium"><i class="fa fa-bookmark"></i></span></div>
+        <div :show="show_mark" class="is-overlay has-text-right" style="z-index:1;margin-top:40%;"><span class="icon is-medium"><i class="fa fa-bookmark"></i></span></div>
         <div class="card-image">
             <figure class="image is-2by1">
             <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
@@ -16,3 +16,12 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      show_mark: true
+    }
+  }
+}
+</script>
