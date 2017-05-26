@@ -10,8 +10,13 @@ export default {
   [types.CHANGE_FOOTER_NAV_SHOW] (state, tick) {
     state.footer_nav_show = tick
   },
-  [types.CHANGE_DETAILS_NAV_SHOW] (state, tick, title) {
+  [types.CHANGE_DETAILS_NAV_SHOW] (state, tick) {
     state.details_nav_show = tick
-    state.details_title = title
+  },
+  [types.CHANGE_DETAILS_NAV_TITLE] (state, title) {
+    state.details_nav_title = title
+  },
+  [types.CHANGE_MARK_SHOW] (state, showType) {
+    state.show_mark = showType
   }
 }

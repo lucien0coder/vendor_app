@@ -15,12 +15,13 @@
 export default {
   data () {
     return {
-      title: this.$store.state.details_title
+      title: this.$store.state.details_nav_title
     }
   },
   methods: {
     backToList () {
-      console.log(this.$store.state.details_title)
+      let a = this.$store.state.details_nav_title
+      console.log(a)
     }
   }
 }

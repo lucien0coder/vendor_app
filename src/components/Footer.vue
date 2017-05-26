@@ -65,6 +65,8 @@ export default {
       } else if (tap === 4) {
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       } else {
+        let smf = tap === 0 && true || tap === 1 && false
+        this.$store.dispatch('CHANGE_MARK_SHOW', smf)
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', true)
         this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', true)
       }

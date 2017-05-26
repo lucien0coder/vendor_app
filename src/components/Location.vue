@@ -8,7 +8,7 @@
                 &nbsp;&nbsp;&nbsp;{{title}}
             </router-link>
         </div>
-        <div :show="show_mark" class="is-overlay has-text-right" style="z-index:1;margin-top:40%;"><span class="icon is-medium"><i class="fa fa-bookmark"></i></span></div>
+        <LocationMark v-if="show_mark"></LocationMark>
         <div class="card-image">
             <figure class="image is-2by1">
             <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
@@ -17,11 +17,16 @@
     </div>
 </template>
 <script>
+import LocationMark from './LocationMark'
+
 export default {
+  components: {
+    LocationMark
+  },
   data () {
     return {
-      show_mark: true,
-      title: this.$store.state.title
+      show_mark: this.$store.state.show_mark,
+      title: '番禺'
     }
   }
 }

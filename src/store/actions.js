@@ -10,7 +10,13 @@ export default {
   [types.CHANGE_FOOTER_NAV_SHOW] ({commit}, tick) {
     commit(types.CHANGE_FOOTER_NAV_SHOW, tick)
   },
-  [types.CHANGE_DETAILS_NAV_SHOW] ({commit}, tick, title) {
-    commit(types.CHANGE_DETAILS_NAV_SHOW, tick, title)
+  [types.CHANGE_DETAILS_NAV_SHOW] ({commit}, tick) {
+    commit(types.CHANGE_DETAILS_NAV_SHOW, tick)
+  },
+  [types.CHANGE_DETAILS_NAV_TITLE] ({commit}, title) {
+    commit(types.CHANGE_DETAILS_NAV_TITLE, title)
+  },
+  [types.CHANGE_MARK_SHOW] ({commit}, showType) {
+    commit(types.CHANGE_MARK_SHOW, showType)
   }
 }

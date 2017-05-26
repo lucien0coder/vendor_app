@@ -12,7 +12,7 @@
                     </figure>
                 </div>
                 <div class="media-content">
-                    <p class="title is-5" @click="intoUserDetails('美食家详情')"><strong>
+                    <p class="title is-5" @click="intoUserDetails"><strong>
                     <router-link to="/details/user/222">
                       John Smith
                     </router-link>
@@ -23,7 +23,7 @@
                 <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a>#css</a> <a>#location</a>
+                <a>#css</a> <router-link to="/details/shop/111"><span @click="intoShopDetails">#location</span></router-link>
                 <br>
                 </div>
             </div>
@@ -95,11 +95,18 @@ export default {
     Location
   },
   methods: {
-    intoUserDetails (title) {
-      console.log(title)
+    intoUserDetails () {
+      this.showNavBar()
+      this.$store.dispatch('CHANGE_DETAILS_NAV_TITLE', '美食家详情')
+    },
+    intoShopDetails () {
+      this.showNavBar()
+      this.$store.dispatch('CHANGE_DETAILS_NAV_TITLE', '店铺详情')
+    },
+    showNavBar () {
       this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
-      this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', true, title)
+      this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', true)
     }
   }
 }
