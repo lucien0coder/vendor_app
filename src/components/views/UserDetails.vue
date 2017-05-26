@@ -87,7 +87,7 @@
         </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
     .user_level{
         position: absolute;
         right: 7rem;

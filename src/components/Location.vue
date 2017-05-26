@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="fa fa-map-marker"></i>
                 </span>
-                &nbsp;&nbsp;&nbsp;番禺
+                &nbsp;&nbsp;&nbsp;{{title}}
             </router-link>
         </div>
         <div :show="show_mark" class="is-overlay has-text-right" style="z-index:1;margin-top:40%;"><span class="icon is-medium"><i class="fa fa-bookmark"></i></span></div>
@@ -20,7 +20,8 @@
 export default {
   data () {
     return {
-      show_mark: true
+      show_mark: true,
+      title: this.$store.state.title
     }
   }
 }

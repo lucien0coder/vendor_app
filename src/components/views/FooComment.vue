@@ -12,7 +12,7 @@
                     </figure>
                 </div>
                 <div class="media-content">
-                    <p class="title is-5"><strong>
+                    <p class="title is-5" @click="intoUserDetails('美食家详情')"><strong>
                     <router-link to="/details/user/222">
                       John Smith
                     </router-link>
@@ -93,6 +93,14 @@ import Location from '../Location'
 export default {
   components: {
     Location
+  },
+  methods: {
+    intoUserDetails (title) {
+      console.log(title)
+      this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
+      this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
+      this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', true, title)
+    }
   }
 }
 </script>
