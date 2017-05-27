@@ -11,7 +11,7 @@
                 <p class="control has-icons-left">
                     <input class="input" type="text" placeholder="search city">
                     <span class="icon">
-                        <icon class="fa fa-search"></icon>
+                        <i class="fa fa-search"></i>
                     </span>
                 </p>
             </div>

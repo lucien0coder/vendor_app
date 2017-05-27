@@ -1,5 +1,5 @@
 <template>
-  <div @click="consomark" class="is-overlay has-text-right" style="z-index:1;margin-top:40%;">
+  <div @click="listmark" class="is-overlay has-text-right" style="z-index:1;margin-top:40%;">
     <span class="icon is-medium" >
       <i class="fa fa-bookmark"></i>
     </span>
@@ -9,7 +9,7 @@
 <script>
 export default {
   methods: {
-    consomark () {
+    listmark () {
       console.log(this.$store.state.show_mark)
     }
   }

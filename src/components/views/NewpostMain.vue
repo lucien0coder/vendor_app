@@ -4,17 +4,17 @@
         <div class="columns">
         <div class="column has-text-centered">
             <span class="icon is-large">
-                <icon class="fa text_border">食</icon>
+                <i class="fa text_border">食</i>
             </span>
         </div>
         <div class="column">
         </div>
         <div class="column has-text-centered">
             <span class="icon is-large" style="padding-right:4rem">
-                <icon class="fa text_border">寻</icon>
+                <i class="fa text_border">寻</i>
             </span>
             <span class="icon is-large" style="padding-left:4rem">
-                <icon class="fa text_border">尝</icon>
+                <i class="fa text_border">尝</i>
             </span>
         </div>
         <div class="column">

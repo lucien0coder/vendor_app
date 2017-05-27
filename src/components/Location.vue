@@ -1,8 +1,8 @@
 <template>
     <div class="card" style="margin-bottom: 0.2rem;">
-        <div class="is-overlay has-text-centered" style="z-index: 1;margin-top: 20%;">
+        <div class="is-overlay has-text-centered" style="z-index: 1;margin-top: 20%;" >
             <router-link to="/selected" class="button is-warning is-outlined is-medium">
-                <span class="icon">
+                <span class="icon" @click="intoSelect">
                     <i class="fa fa-map-marker"></i>
                 </span>
                 &nbsp;&nbsp;&nbsp;{{title}}
@@ -25,8 +25,19 @@ export default {
   },
   data () {
     return {
-      show_mark: this.$store.state.show_mark,
       title: '番禺'
+    }
+  },
+  computed: {
+    show_mark: function () {
+      let flg = this.$store.state.show_mark
+      return flg
+    }
+  },
+  methods: {
+    intoSelect () {
+      this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
+      this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
     }
   }
 }

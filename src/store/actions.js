@@ -18,5 +18,8 @@ export default {
   },
   [types.CHANGE_MARK_SHOW] ({commit}, showType) {
     commit(types.CHANGE_MARK_SHOW, showType)
+  },
+  [types.CHANGE_NEW_POST_CMP_SHOW] ({commit}, isNew) {
+    commit(types.CHANGE_NEW_POST_CMP_SHOW, isNew)
   }
 }

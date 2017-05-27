@@ -62,6 +62,7 @@ export default {
       if (tap === 2) {
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
         this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
+        this.$store.dispatch('CHANGE_NEW_POST_CMP_SHOW', true)
       } else if (tap === 4) {
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       } else {

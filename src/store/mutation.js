@@ -18,5 +18,8 @@ export default {
   },
   [types.CHANGE_MARK_SHOW] (state, showType) {
     state.show_mark = showType
+  },
+  [types.CHANGE_NEW_POST_CMP_SHOW] (state, isNew) {
+    state.new_post_show = isNew
   }
 }
