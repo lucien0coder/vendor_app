@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <section class="hero is-warning  is-fullheight">
+      <SearchBar :show="true"></SearchBar>
         <div class="hero-body">
             <div class="container">
             <div class="field has-addons">
@@ -114,8 +115,15 @@
                     </a>
                 </footer>
                 </div>
-
             </div>
         </div>
-    </div>
+    </section>
 </template>
+<script>
+import SearchBar from '../SearchBar'
+export default {
+  components: {
+    SearchBar
+  }
+}
+</script>

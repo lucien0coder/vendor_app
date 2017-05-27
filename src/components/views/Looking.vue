@@ -1,10 +1,9 @@
 <template>
-    <div>
+    <section class="hero is-warning  is-fullheight">
+      <SearchBar :show="true"></SearchBar>
         <div class="hero-body">
             <div class="container">
-
                 <Location :show="true"></Location>
-
                 <div class="card" style="margin-bottom: 0.2rem;">
                 <div class="card-content">
                     <div class="media">
@@ -123,18 +122,17 @@
                     </a>
                 </footer>
                 </div>
-
             </div>
         </div>   
-    
-    
-    </div>
+    </section>
 </template>
 <script>
 import Location from '../Location'
+import SearchBar from '../SearchBar'
 export default {
   components: {
-    Location
+    Location,
+    SearchBar
   }
 }
 </script>

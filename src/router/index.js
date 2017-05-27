@@ -10,6 +10,7 @@ import Signup from '@/components/views/Signup'
 import Selected from '@/components/views/Selected'
 import ShopDetails from '@/components/views/ShopDetails'
 import UserDetails from '@/components/views/UserDetails'
+import NewPost from '@/components/views/Newpost'
 
 Vue.use(Router)
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/details/user/:id',
       name: 'userDetails',
       component: UserDetails
+    },
+    {
+      path: '/newpost',
+      name: 'newPost',
+      component: NewPost
     }
   ]
 })

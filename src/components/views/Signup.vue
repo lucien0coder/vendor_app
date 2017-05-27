@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section class="hero is-warning  is-fullheight">
         <div class="hero-head">
             <div class="container has-text-centered">
                 <p class="title">新用户注册</p>
@@ -73,5 +73,5 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </section>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section class="hero is-warning  is-fullheight">
         <div class="hero-head">
             <h2 class="subtitle has-text-centered" style="margin:0.5rem">
                 <span class="icon is-pulled-left">
@@ -90,5 +90,5 @@
                 </article>
             </div>
         </div>
-    </div>
+    </section>
 </template>

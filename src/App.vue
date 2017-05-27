@@ -1,31 +1,20 @@
 <template>
   <div id="app">
     <DetilsNav v-if="nav_show"></DetilsNav>
-    <section class="hero is-warning  is-fullheight">
-      <SearchBar v-if="search_show"></SearchBar>
-      <router-view></router-view>
-      <NewPostMain v-if="new_post_show"></NewPostMain>
-      <NewPostBack v-if="new_post_show"></NewPostBack>
-    </section>
+    <router-view></router-view>
     <AllFooter v-if="footer_show"></AllFooter>
   </div>
 </template>
 
 <script>
-import SearchBar from './components/SearchBar'
 import AllFooter from './components/Footer'
 import DetilsNav from './components/Nav'
-import NewPostMain from './components/views/NewpostMain'
-import NewPostBack from './components/views/NewpostBack'
 
 export default {
   name: 'app',
   components: {
-    SearchBar,
     AllFooter,
-    DetilsNav,
-    NewPostMain,
-    NewPostBack
+    DetilsNav
   },
   computed: {
     search_show: function () {

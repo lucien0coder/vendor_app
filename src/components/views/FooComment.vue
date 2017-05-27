@@ -1,8 +1,9 @@
 <template>
+  <section class="hero is-warning  is-fullheight">
+    <SearchBar :show="true"></SearchBar>
     <div class="hero-body">
         <div class="container">
             <Location :show="true"></Location>
-
             <div class="card" style="margin-bottom: 0.2rem;">
             <div class="card-content">
                 <div class="media">
@@ -85,14 +86,17 @@
             </div>
         </div>
     </div>
+  </section>
 </template>
 
 <script>
+import SearchBar from '../SearchBar'
 import Location from '../Location'
 
 export default {
   components: {
-    Location
+    Location,
+    SearchBar
   },
   methods: {
     intoUserDetails () {

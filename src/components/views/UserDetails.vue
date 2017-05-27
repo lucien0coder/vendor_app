@@ -1,5 +1,5 @@
 <template>
-    <div>
+   <section class="hero is-warning  is-fullheight">
         <span class="user_level">一级美食家</span>
         <div class="hero-head">
             <h2 class="subtitle has-text-centered" style="margin:0.5rem">
@@ -85,7 +85,7 @@
                 </article>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 <style lang="scss" scoped>
     .user_level{
