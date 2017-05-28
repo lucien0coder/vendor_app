@@ -12,7 +12,7 @@
                   <span class="icon">『尋』</span>
               </router-link>
               </li>
-              <li v-bind:class="{'is-active': n_tap}" @click="changeFooterTap(2)">
+              <li @click="changeFooterTap(2)">
               <router-link to="/newpost">
                   <span class="icon"><i class="fa fa-pencil"></i></span>
               </router-link>
@@ -63,6 +63,7 @@ export default {
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
         this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
         this.$store.dispatch('CHANGE_NEW_POST_CMP_SHOW', true)
+        tap = this.$store.state.footer_tab_class
       } else if (tap === 4) {
         this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       } else {

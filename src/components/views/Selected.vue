@@ -7,7 +7,7 @@
                 </span>
                 <strong>地点切换</strong>
             </h2>
-            <div class="field">
+            <div class="field" style="margin-top: 1.5rem;">
                 <p class="control has-icons-left">
                     <input class="input" type="text" placeholder="search city">
                     <span class="icon">

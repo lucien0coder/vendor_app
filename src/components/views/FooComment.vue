@@ -24,14 +24,14 @@
                 <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a>#css</a> <router-link to="/details/shop/111"><span @click="intoShopDetails">#location</span></router-link>
+                <a>#css</a> <router-link to="/details/shop/111" @click.native="intoShopDetails">#location</router-link>
                 <br>
                 </div>
             </div>
             <footer class="card-footer">
-                <a class="card-footer-item">
-                    <span class="icon is-small"><i class="fa fa-comment-o">2000</i></span>
-                </a>
+                <router-link to="/fooComment/112" class="card-footer-item" @click.native="intoFCDetails">
+                    <span class="icon is-small" ><i class="fa fa-comment-o">2000</i></span>
+                </router-link>
                 <a class="card-footer-item">
                     <span class="icon is-small"><i class="fa fa-heart-o">2000</i></span>
                 </a>
@@ -111,6 +111,10 @@ export default {
       this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
       this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', true)
+    },
+    intoFCDetails () {
+      this.showNavBar()
+      this.$store.dispatch('CHANGE_DETAILS_NAV_TITLE', '食评详情')
     }
   }
 }

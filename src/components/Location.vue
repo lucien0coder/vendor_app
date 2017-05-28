@@ -2,10 +2,12 @@
     <div class="card" style="margin-bottom: 0.2rem;">
         <div class="is-overlay has-text-centered" style="z-index: 1;margin-top: 20%;" >
             <router-link to="/selected" class="button is-warning is-outlined is-medium">
-                <span class="icon" @click="intoSelect">
-                    <i class="fa fa-map-marker"></i>
+                <span @click="intoSelect">
+                  <span class="icon">
+                      <i class="fa fa-map-marker"></i>
+                  </span>
+                  &nbsp;&nbsp;&nbsp;{{title}}
                 </span>
-                &nbsp;&nbsp;&nbsp;{{title}}
             </router-link>
         </div>
         <LocationMark v-if="show_mark"></LocationMark>
@@ -36,8 +38,13 @@ export default {
   },
   methods: {
     intoSelect () {
+      this.showNavbar()
+      this.$store.dispatch('CHANGE_DETAILS_NAV_TITLE', '地点切换')
+    },
+    showNavbar () {
       this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', false)
       this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', false)
+      this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', true)
     }
   }
 }

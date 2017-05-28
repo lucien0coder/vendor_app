@@ -20,8 +20,13 @@ export default {
   },
   methods: {
     backToList () {
-      let a = this.$store.state.details_nav_title
-      console.log(a)
+      this.hiddenBar()
+      this.$router.go(-1)
+    },
+    hiddenBar () {
+      this.$store.dispatch('CHANGE_SEARCH_BAR_SHOW', true)
+      this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', true)
+      this.$store.dispatch('CHANGE_DETAILS_NAV_SHOW', false)
     }
   }
 }
