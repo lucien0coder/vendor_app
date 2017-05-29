@@ -8,9 +8,11 @@
                 <div class="card-content">
                     <div class="media">
                     <div class="media-left">
-                        <figure class="image is-48x48">
+                      <router-link to="/details/user/222">
+                        <figure class="image is-48x48" @click="userDetails">
                         <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
                         </figure>
+                      </router-link>
                     </div>
                     <div class="media-content">
                         <p class="title is-5"><strong>John Smith</strong>
@@ -133,6 +135,11 @@ export default {
   components: {
     Location,
     SearchBar
+  },
+  methods: {
+    userDetails () {
+      console.log('dd')
+    }
   }
 }
 </script>

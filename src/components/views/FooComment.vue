@@ -8,9 +8,11 @@
             <div class="card-content">
                 <div class="media">
                 <div class="media-left">
-                    <figure class="image is-48x48">
+                  <router-link to="/details/user/222">
+                    <figure class="image is-48x48" @click="intoUserDetails">
                     <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
                     </figure>
+                  </router-link>
                 </div>
                 <div class="media-content">
                     <p class="title is-5" @click="intoUserDetails"><strong>
@@ -21,22 +23,28 @@
                     <p class="subtitle is-6">11:09 PM - 1 Jan 2016</p>
                 </div>
                 </div>
-                <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a>#css</a> <router-link to="/details/shop/111" @click.native="intoShopDetails">#location</router-link>
-                <br>
-                </div>
+                <router-link to="/fooComment/112" @click.native="intoFCDetails">
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>
+                  <a @click="ckcss">#css</a>
+                  </div>
+                </router-link>
+                <router-link to="/details/shop/111" @click.native="intoShopDetails">#location</router-link>
             </div>
             <footer class="card-footer">
+                <a class="card-footer-item">
+                    <span class="icon is-small">
+                      <i class="fa fa-heart-o"></i>
+                    </span>
+                </a>
                 <router-link to="/fooComment/112" class="card-footer-item" @click.native="intoFCDetails">
                     <span class="icon is-small" ><i class="fa fa-comment-o">2000</i></span>
                 </router-link>
                 <a class="card-footer-item">
-                    <span class="icon is-small"><i class="fa fa-heart-o">2000</i></span>
-                </a>
-                <a class="card-footer-item">
-                    <span class="icon is-small"><i class="fa fa-star-o">2000</i></span>
+                    <span class="icon is-small">
+                      <i class="fa fa-star-o"></i>
+                    </span>
                 </a>
             </footer>
             </div>
@@ -73,14 +81,22 @@
                 </div>
             </div>
             <footer class="card-footer">
-                <a class="card-footer-item">
+                <a class="card-footer-item" @click="likeThis">
+                    <span class="icon is-small">
+                      <i class="fa fa-heart-o" v-if="!isLike"></i>
+                      <i class="fa fa-heart" v-if="isLike"></i>
+                    </span>
+                </a>
+                <router-link to="/fooComment/112" class="card-footer-item">
                     <span class="icon is-small"><i class="fa fa-comment-o">2000</i></span>
-                </a>
-                <a class="card-footer-item">
-                    <span class="icon is-small"><i class="fa fa-heart-o">2000</i></span>
-                </a>
-                <a class="card-footer-item">
-                    <span class="icon is-small"><i class="fa fa-star-o">2000</i></span>
+                </router-link>
+                <a class="card-footer-item" @click="collectThis">
+                    <span class="icon is-small">
+                    <transition name="fade">
+                      <i class="fa fa-star-o" v-if="!isColt"></i>
+                      <i class="fa fa-star" v-if="isColt"></i>
+                    </transition>
+                    </span>
                 </a>
             </footer>
             </div>
@@ -94,6 +110,12 @@ import SearchBar from '../SearchBar'
 import Location from '../Location'
 
 export default {
+  data () {
+    return {
+      isLike: true,
+      isColt: true
+    }
+  },
   components: {
     Location,
     SearchBar
@@ -115,7 +137,26 @@ export default {
     intoFCDetails () {
       this.showNavBar()
       this.$store.dispatch('CHANGE_DETAILS_NAV_TITLE', '食评详情')
+    },
+    ckcss (event) {
+      event.stopPropagation()
+      event.preventDefault()
+      console.log('click css')
+    },
+    likeThis () {
+      this.isLike = !this.isLike
+    },
+    collectThis () {
+      this.isColt = !this.isColt
     }
   }
 }
 </script>
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}
+</style>
