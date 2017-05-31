@@ -13,7 +13,7 @@ export default {
   methods: {
     backToList () {
       this.$store.dispatch('CHANGE_FOOTER_NAV_SHOW', true)
-      this.$store.dispatch('CHANGE_NEW_POST_CMP_SHOW', false)
+      this.$store.commit('CHANGE_NEW_POST_CMP_SHOW', false)
       this.$router.go(-1)
     }
   }

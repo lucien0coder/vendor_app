@@ -1,21 +1,24 @@
 <template>
-  <section class="hero is-warning  is-fullheight">
+  <section class="hero is-warning  is-fullheight" style="overflow: hidden;">
     <div class="hero-body">
       <div class="container">
           <div class="columns">
           <transition 
             v-on:enter="fc_enter"
+            v-on:leave="leave"
           >
             <BtnFc v-if="new_show"></BtnFc>
           </transition>
           <div class="column has-text-centered">
           <transition 
             v-on:enter="l_enter"
+            v-on:leave="leave"
           >
             <BtnL v-if="new_show"></BtnL>
           </transition>
           <transition 
             v-on:enter="c_enter"
+            v-on:leave="leave"
           >
             <BtnC v-if="new_show"></BtnC>
           </transition>
@@ -72,6 +75,12 @@ export default {
       Velocity(el, {
         rotateZ: '360deg'
       })
+    },
+    leave: function (el, done) {
+      Velocity(el, {
+        rotateZ: '90deg',
+        opacity: 0
+      }, { complete: done })
     }
   }
 }

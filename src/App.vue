@@ -2,6 +2,12 @@
   <div id="app">
     <DetilsNav v-if="nav_show"></DetilsNav>
     <router-view></router-view>
+    <transition name="fade">
+      <router-view name="newPage"></router-view>
+    </transition>
+    <transition>
+      <router-view name="detailsPage"></router-view>
+    </transition>
     <AllFooter v-if="footer_show"></AllFooter>
   </div>
 </template>
@@ -38,6 +44,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma'
-
+@import '~bulma';
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}
 </style>

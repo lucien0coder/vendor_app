@@ -19,57 +19,79 @@ export default new Router({
     {
       path: '/',
       name: 'fooComment',
-      component: FooComment
+      components: {
+        default: FooComment
+      }
     },
     {
       path: '/fooComment/:id',
       name: 'fcDetails',
-      component: FoodCommentDetails
+      components: {
+        detailsPage: FoodCommentDetails
+      }
     },
     {
       path: '/looking',
       name: 'looking',
-      component: Looking
+      components: {
+        default: Looking
+      }
     },
     {
       path: '/track',
       name: 'track',
-      component: Track
+      components: {
+        default: Track
+      }
     },
     {
       path: '/mine',
       name: 'mypage',
-      component: Mine
+      components: {
+        default: Mine
+      }
     },
     {
       path: '/signin',
       name: 'signin',
-      component: Signin
+      components: {
+        default: Signin
+      }
     },
     {
       path: '/signup',
       name: 'signup',
-      component: Signup
+      components: {
+        default: Signup
+      }
     },
     {
       path: '/selected',
       name: 'select_city',
-      component: Selected
+      components: {
+        detailsPage: Selected
+      }
     },
     {
       path: '/details/shop/:id',
       name: 'shopDetails',
-      component: ShopDetails
+      components: {
+        detailsPage: ShopDetails
+      }
     },
     {
       path: '/details/user/:id',
       name: 'userDetails',
-      component: UserDetails
+      components: {
+        detailsPage: UserDetails
+      }
     },
     {
       path: '/newpost',
       name: 'newPost',
-      component: NewPost
+      components: {
+        newPage: NewPost
+      }
     }
   ]
 })
