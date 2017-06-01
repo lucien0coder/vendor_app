@@ -30,6 +30,7 @@
     </div>
     <transition
       v-on:enter="back_enter"
+      v-bind:css="false"
     >
       <NewPostBack v-if="new_show"></NewPostBack>
     </transition>
