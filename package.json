@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "bulma": "^0.4.1",
+    "cordova": "^7.0.1",
     "css-loader": "^0.26.4",
     "sass-loader": "^6.0.5",
     "velocity-animate": "^1.5.0",
